@@ -1,0 +1,13 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - chmod +x generate.sh
+    build:
+      commands:
+        - ./generate.sh
+  artifacts:
+    baseDirectory: files
+    files:
+      - '**/*'
